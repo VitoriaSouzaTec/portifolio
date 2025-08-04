@@ -12,13 +12,12 @@ export default function AccordionUsage() {
 
       <div className='mt-10 flex flex-col gap-4 justify-center items-center'>
         
-        {/* FRONTEND */}
-        <Accordion sx={{ w: "40%", bgcolor: "#fce4ec", color: "#000" }}>
+        <Accordion sx={{ width: "40%", bgcolor: "#fce4ec", color: "#000" }}>
           <AccordionSummary expandIcon={<ChevronDown />} aria-controls="panel1-content" id="frontend">
             <Typography component="span">Frontend</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <ul className='space-y-2'>
+            <ul className='flex flex-wrap gap-6'>
               <li className='flex items-center gap-2'>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width={20} />
                 HTML
@@ -35,13 +34,13 @@ export default function AccordionUsage() {
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width={20} />
                 React
               </li>
-              <li className='flex items-center gap-2'>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind" width={20} />
-                Tailwind CSS
+               <li className='flex items-center gap-2'>
+                <img src="https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/nextjs/nextjs-original.svg" alt="React" width={20} />
+                Next.js
               </li>
               <li className='flex items-center gap-2'>
-                <img src="https://seeklogo.com/images/M/microsoft-clarity-logo-16AFEF2C60-seeklogo.com.png" alt="Clarity" width={20} />
-                Clarity
+                <img src="https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" width={20} />
+                Tailwind CSS
               </li>
               <li className='flex items-center gap-2'>
                 🧪 Testes de interface
@@ -51,12 +50,12 @@ export default function AccordionUsage() {
         </Accordion>
 
         {/* BACKEND */}
-        <Accordion sx={{ w: "40%", bgcolor: "#fce4ec", color: "#000" }}>
+        <Accordion sx={{ width: "40%", bgcolor: "#fce4ec", color: "#000" }}>
           <AccordionSummary expandIcon={<ChevronDown />} aria-controls="panel2-content" id="backend">
             <Typography component="span">Backend</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <ul className='space-y-2'>
+            <ul className='flex flex-wrap gap-6'>
               <li className='flex items-center gap-2'>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width={20} />
                 Node.js
@@ -66,7 +65,7 @@ export default function AccordionUsage() {
                 Express
               </li>
               <li className='flex items-center gap-2'>
-                <img src="https://www.svgrepo.com/show/354202/prisma.svg" alt="Prisma" width={20} />
+                <img src="https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/prisma/prisma-original.svg" alt="Prisma" width={20} />
                 Prisma ORM
               </li>
               <li className='flex items-center gap-2'>
@@ -78,7 +77,7 @@ export default function AccordionUsage() {
                 PostgreSQL
               </li>
               <li className='flex items-center gap-2'>
-                <img src="https://static-00.iconduck.com/assets.00/insomnia-icon-2048x2048-lq2ga1n1.png" alt="Insomnia" width={20} />
+                <img src="https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/insomnia/insomnia-plain.svg" alt="Insomnia" width={20} />
                 Insomnia
               </li>
               <li className='flex items-center gap-2'>
@@ -96,12 +95,12 @@ export default function AccordionUsage() {
         </Accordion>
 
         {/* CIÊNCIA DE DADOS */}
-        <Accordion sx={{ w: "40%", bgcolor: "#fce4ec", color: "#000" }}>
+        <Accordion sx={{ width: "40%", bgcolor: "#fce4ec", color: "#000" }}>
           <AccordionSummary expandIcon={<ChevronDown />} aria-controls="panel3-content" id="datascience">
             <Typography component="span">Ciência de dados</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <ul className='space-y-2'>
+            <ul className='flex flex-wrap gap-6'>
               <li className='flex items-center gap-2'>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width={20} />
                 Python

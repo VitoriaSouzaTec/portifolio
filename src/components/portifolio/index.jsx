@@ -15,10 +15,10 @@ const projetos = [
     link: "https://gerador-de-curriculo-pied.vercel.app/"
   },
   {
-    titulo: "Sistema de Tarefas",
-    descricao: "App para organizar tarefas diárias com funcionalidades de prioridade e prazo.",
-    imagem: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
-    link: "https://exemplo.com/sistema-tarefas"
+    titulo: "Classificador De Filmes",
+    descricao: "Aplicação web para classificar filmes, com login, admin e crud completo.",
+    imagem: "/projeto-classificador-filmes.png",
+    link: "#"
   },
   {
     titulo: "Loja Virtual",

@@ -14,13 +14,13 @@ export default function AboutSection() {
           Olá! Meu nome é Vitória Souza e sou apaixonada por criar soluções com propósito.
         </p>
         <p>
-          Minha jornada na programação começou em 2023, quando me encantei ao desenvolver meus primeiros sites com HTML e CSS. Desde então, venho mergulhando cada vez mais fundo nesse universo.
+          Meu interesse por programação começou quando tive a ideia de criar uma loja online. Usei uma daquelas plataformas de sites prontos, mas isso só aumentou minha curiosidade sobre como tudo funcionava por trás. Foi aí que percebi que queria aprender de verdade a construir meus próprios sistemas.
         </p>
         <p>
-          Hoje, meu foco está no desenvolvimento back-end, onde posso unir lógica, estrutura e performance para criar aplicações robustas e funcionais.
+          Desde então, iniciei minha jornada de estudos em dezembro de 2023. Comecei com um curso EAD de desenvolvimento Full Stack, depois migrei para um curso presencial na mesma área. Também cursei um semestre de Engenharia de Software, mas decidi seguir com Análise e Desenvolvimento de Sistemas (ADS), onde continuo estudando atualmente, com planos de fazer uma pós-graduação em Engenharia de Software.
         </p>
         <p>
-          Estou sempre buscando evoluir, aprender novas tecnologias e transformar ideias em código.
+          Hoje, meu foco está no desenvolvimento back-end, onde posso unir lógica, estrutura e performance para criar aplicações robustas e funcionais. Estou sempre buscando evoluir, aprender novas tecnologias e transformar ideias em código.
         </p>
       </div>
 
@@ -40,10 +40,14 @@ export default function AboutSection() {
       </div>
 
       {/* Botão "Download CV" */}
-      <button className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-lg hover:bg-indigo-700 transition">
+      <a
+        href="/curriculo.pdf"
+        download
+        className="w-[200px] flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-lg hover:bg-indigo-700 transition"
+      >
         <Download />
         Download CV
-      </button>
+      </a>
     </div>
   );
 }

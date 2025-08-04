@@ -36,11 +36,11 @@ export default function Nav() {
       {/* Menu Mobile (visível quando clicado) */}
       {menuOpen && (
         <div className="md:hidden flex flex-col items-center px-4 pb-4 space-y-2 font-bold bg-gradient-to-r from-purple-600 to-pink-500 text-white">
-          <Link href="/" onClick={() => setMenuOpen(false)} className="hover:underline">Home</Link>
-          <Link href="/sobre" onClick={() => setMenuOpen(false)} className="hover:underline">Sobre</Link>
-          <Link href="/habilidade" onClick={() => setMenuOpen(false)} className="hover:underline">Habilidades</Link>
-          <Link href="/projetos" onClick={() => setMenuOpen(false)} className="hover:underline">Projetos</Link>
-          <Link href="/contato" onClick={() => setMenuOpen(false)} className="hover:underline">Contato</Link>
+          <Link href="#home" onClick={() => setMenuOpen(false)} className="hover:underline">Home</Link>
+          <Link href="#about" onClick={() => setMenuOpen(false)} className="hover:underline">Sobre</Link>
+          <Link href="hardskills" onClick={() => setMenuOpen(false)} className="hover:underline">Habilidades</Link>
+          <Link href="#projects" onClick={() => setMenuOpen(false)} className="hover:underline">Projetos</Link>
+          <Link href="#contact" onClick={() => setMenuOpen(false)} className="hover:underline">Contato</Link>
         </div>
       )}
     </nav>
