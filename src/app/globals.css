@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
+  html, body {
+  overflow-x: hidden;
+  width: 100vw;
+  scroll-behavior: smooth;
+}
+
+  body {
+    @apply bg-[#fdfbff] text-[--foreground] font-sans;
+  }
+}
