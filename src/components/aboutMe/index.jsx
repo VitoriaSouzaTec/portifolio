@@ -11,17 +11,14 @@ export default function AboutSection() {
       {/* Texto "Sobre Mim" */}
       <div className="space-y-4 text-gray-700 text-xl">
         <p>
-          Olá! Meu nome é Vitória Souza e sou apaixonada por criar soluções com propósito.
+        Olá! Meu nome é Vitória Souza e sou desenvolvedora <strong>Full Stack</strong>. Minha paixão por tecnologia surgiu de uma necessidade prática: construir minha própria loja online. Esse interesse inicial evoluiu para uma jornada de aprendizado contínuo, onde comecei a entender a fundo como a lógica, a estrutura e a performance se unem para dar vida a um sistema.
         </p>
         <p>
-          Meu interesse por programação começou quando tive a ideia de criar uma loja online. Usei uma daquelas plataformas de sites prontos, mas isso só aumentou minha curiosidade sobre como tudo funcionava por trás. Foi aí que percebi que queria aprender de verdade a construir meus próprios sistemas.
+         Desde que iniciei meus estudos em 2023, passei por diversos cursos e agora estou cursando <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> para aprofundar ainda mais minhas competências. Meu foco é ser uma profissional completa, capaz de atuar em todas as camadas de uma aplicação, garantindo que o produto final seja funcional, eficiente e bem construído.
         </p>
         <p>
-          Desde então, iniciei minha jornada de estudos em dezembro de 2023. Comecei com um curso EAD de desenvolvimento Full Stack, depois migrei para um curso presencial na mesma área. Também cursei um semestre de Engenharia de Software, mas decidi seguir com Análise e Desenvolvimento de Sistemas (ADS), onde continuo estudando atualmente, com planos de fazer uma pós-graduação em Engenharia de Software.
-        </p>
-        <p>
-          Hoje, meu foco está no desenvolvimento back-end, onde posso unir lógica, estrutura e performance para criar aplicações robustas e funcionais. Estou sempre buscando evoluir, aprender novas tecnologias e transformar ideias em código.
-        </p>
+        Estou sempre aberta a novos aprendizados e desafios, e pronta para contribuir em projetos inovadores.
+      </p>
       </div>
 
       {/* Divisor */}

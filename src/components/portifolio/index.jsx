@@ -9,21 +9,21 @@ const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 const projetos = [
   {
-    titulo: "Gerador de Currículos",
-    descricao: "Aplicação web para criar currículos personalizados e exportar em PDF.",
-    imagem: "/gerador-de-curriculo.png",
-    link: "https://gerador-de-curriculo-pied.vercel.app/"
+    titulo: "E-Comerce",
+    descricao: "Uma aplicação Full Stack de e-commerce de roupas, desenvolvida com Next.js, que oferece uma experiência de compra moderna e intuitiva. A plataforma foi construída com as seguintes tecnologias: o sistema de pagamentos utiliza o Stripe para transações seguras e simplifica a vida do usuário. O login é fácil e rápido, integrado com o Google Auth. A arquitetura do banco de dados usa Neon junto com a ORM Drizzle, uma combinação que garante um desempenho excelente e a integridade de todos os dados do estoque e dos clientes.",
+    imagem: "/tela-beware.png",
+    link: "https://bewearshop.vercel.app/"
   },
   {
     titulo: "Classificador De Filmes",
-    descricao: "Aplicação web para classificar filmes, com login, admin e crud completo.",
+    descricao: "Construída com Next.js no front-end e Express + Sequelize no back-end, usando PostgreSQL para o banco de dados. O sistema conta com autenticação via JWT, painel de admin com CRUD completo e comunicação em tempo real com Socket.IO.",
     imagem: "/projeto-classificador-filmes.png",
-    link: "#"
+    link: "https://projeto-anime-rust.vercel.app/"
   },
   {
-    titulo: "Loja Virtual",
-    descricao: "E-commerce completo com carrinho de compras, checkout e pagamento.",
-    imagem: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    titulo: "Plataforma de Cursos",
+    descricao: "Projeto Full-Stack com foco no desenvolvimento do backend em Node.js/Express e Prisma, com sistema de autenticação seguro por JWT e Bcrypt. O trabalho incluiu a criação da API e a integração com o front-end.",
+    imagem: "/digital-cursos.png",
     link: "https://exemplo.com/loja-virtual"
   }
 ];
@@ -47,7 +47,6 @@ export default function CarouselProjetos() {
             {/* Imagem de fundo */}
             <img
               src={proj.imagem}
-              alt={proj.titulo}
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
 

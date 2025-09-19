@@ -34,10 +34,10 @@ export default function HomeComponent() {
                         text-lg md:text-2xl max-w-md md:max-w-lg">
           <h1 className="text-3xl md:text-5xl font-bold">👋🏼 Olá! Meu nome é Vitória</h1>
           <p>
-            Sou estudante de <strong>Desenvolvimento Full Stack</strong> e <strong>Ciência de Dados</strong> com uma quedinha declarada pelo <strong>back-end</strong>.
+            Sou estudante de <strong>Desenvolvimento Full Stack</strong> com uma quedinha declarada pelo <strong>back-end</strong>.
           </p>
           <p>
-            Amo criar soluções inteligentes com código, misturando lógica, estrutura e um toque de criatividade.
+            Amo criar soluções com código, misturando lógica, estrutura e um toque de criatividade.
           </p>
 
           <div className="mt-2 md:mt-4">
