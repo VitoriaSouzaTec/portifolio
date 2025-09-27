@@ -1,4 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
+// 1. IMPORTAÇÃO DA NOVA FONTE SERIFADA (Estilo Medium)
+import { Literata } from "next/font/google"; 
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// 2. DEFININDO A FONTE LITERATA
+const literata = Literata({
+  variable: "--font-literata",
+  subsets: ["latin"],
+});
+
 export const metadata = {
   title: "Vitoria Souza Portifólio",
   description: "Portifolio",
@@ -20,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${literata.variable} antialiased bg-background text-foreground`}
       >
         {children}
       </body>

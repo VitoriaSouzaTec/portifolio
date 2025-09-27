@@ -1,42 +1,50 @@
 import { Linkedin, Github, Instagram, Mail } from "lucide-react";
 
 export default function Footer() {
+  
+  // Cor de fundo escura e neutra para o rodapé estilo Notion
+  const footerBgColor = 'bg-gray-900'; 
+  const linkHoverColor = 'hover:text-gray-200';
+
   return (
-    <footer className="bg-[#0a0f1c] text-white py-10 px-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-        {/* Coluna 1: Logo */}
-        <div>
+    <footer className={`${footerBgColor} text-white py-12 px-6`}>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-b border-gray-700 pb-8">
+        
+        {/* Coluna 1: Logo/Nome */}
+        <div className="text-center md:text-left">
           <h1 className="text-3xl font-bold">Vitória Souza</h1>
-          <p className="text-sm text-gray-300 mt-1">Desenvolvedora FullStack</p>
+          <p className="text-base text-gray-400 mt-1">Desenvolvedora FullStack</p>
         </div>
 
-        {/* Coluna 2: Links */}
-        <nav className="flex justify-center space-x-8 text-sm">
-          <a href="#services" className="hover:underline">Serviços</a>
-          <a href="#portifolio" className="hover:underline">Portifólio</a>
-          <a href="#contact" className="hover:underline">Contato</a>
+        {/* Coluna 2: Links de Navegação (Centralizado) */}
+        <nav className="flex justify-center md:justify-center gap-6 text-sm font-medium">
+          {/* Alinhando os links com as IDs do seu projeto */}
+          <a href="#about" className={`${linkHoverColor} transition-colors duration-200`}>Sobre</a>
+          <a href="#hardskills" className={`${linkHoverColor} transition-colors duration-200`}>Habilidades</a>
+          <a href="#projects" className={`${linkHoverColor} transition-colors duration-200`}>Projetos</a>
+          <a href="#contact" className={`${linkHoverColor} transition-colors duration-200`}>Contato</a>
         </nav>
 
-        {/* Coluna 3: Redes Sociais */}
+        {/* Coluna 3: Redes Sociais (Alinhado à direita no desktop) */}
         <div className="flex justify-center md:justify-end items-center space-x-6">
-          <a href="https://github.com/VitoriaSouzaTec" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+          <a href="https://github.com/VitoriaSouzaTec" target="_blank" rel="noopener noreferrer" className={`${linkHoverColor} transition-colors duration-200`}>
             <Github size={24} />
           </a>
-          <a href="https://www.linkedin.com/in/vitoria-souza-3a50521b7/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+          <a href="https://www.linkedin.com/in/vitoria-souza-3a50521b7/" target="_blank" rel="noopener noreferrer" className={`${linkHoverColor} transition-colors duration-200`}>
             <Linkedin size={24} />
           </a>
-          <a href="mailto:vitoriasouzatec@gmail.com" className="hover:text-gray-400" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:vitoriasouzatec@gmail.com" className={`${linkHoverColor} transition-colors duration-200`} target="_blank" rel="noopener noreferrer">
             <Mail size={24} />
           </a>
-          <a href="https://www.instagram.com/vitoria__souzasz" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+          <a href="https://www.instagram.com/vitoria__souzasz" target="_blank" rel="noopener noreferrer" className={`${linkHoverColor} transition-colors duration-200`}>
             <Instagram size={24} />
           </a>
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="text-center text-gray-400 text-sm mt-8">
-        © 2025 Vitória Souza – Todos os direitos reservados.
+      {/* Copyright Limpo */}
+      <div className="text-center text-gray-400 text-sm pt-8">
+        © 2025 Vitória Souza
       </div>
     </footer>
   );
