@@ -5,7 +5,7 @@ import LinearProgress from '@mui/material/LinearProgress';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-// Cor neutra/escura para a barra de progresso (substituindo o azul padrão)
+
 const BAR_COLOR = '#191919'; 
 
 // RECEBENDO 'percentage' como uma prop (sem TARGET_PERCENTAGE fixo)

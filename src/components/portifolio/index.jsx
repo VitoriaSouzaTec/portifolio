@@ -24,7 +24,7 @@ const projetos = [
     titulo: "Plataforma de Cursos",
     descricao: "Projeto Full-Stack com foco no desenvolvimento do backend em Node.js/Express e Prisma, com sistema de autenticação seguro por JWT e Bcrypt. O trabalho incluiu a criação da API e a integração com o front-end.",
     imagem: "/digital-cursos.png",
-    link: "https://exemplo.com/loja-virtual"
+    link: "https://github.com/VitoriaSouzaTec/Digital-Cursos-API"
   }
 ];
 
