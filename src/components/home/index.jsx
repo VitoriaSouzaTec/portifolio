@@ -20,7 +20,7 @@ export default function HomeComponent() {
         min-h-[550px]
       " id='home'>
         
-        {/* 1. Ícones sociais (Mantido) */}
+       
         <div className="flex md:flex-col gap-6 justify-center md:pt-2">
           
           <a href="https://www.linkedin.com/in/vitoria-souza-3a50521b7/" target="_blank" rel="noreferrer" className={`${buttonHoverColor} p-2 rounded-md transition-colors duration-200`}>
@@ -37,19 +37,18 @@ export default function HomeComponent() {
           </a>
         </div>
 
-        {/* 2. Texto Principal */}
         <div className="flex flex-col space-y-4 text-center md:text-left text-foreground 
-                         text-lg md:text-xl max-w-md md:max-w-xl font-serif"> {/* <-- CORRIGIDO: Adiciona font-serif AQUI */}
-          <h1 className="text-3xl md:text-5xl font-bold font-sans">👋🏼 Olá! Meu nome é Vitória</h1> {/* <-- font-sans no título */}
+                         text-lg md:text-xl max-w-md md:max-w-xl font-serif"> 
+          <h1 className="text-3xl md:text-5xl font-bold font-sans">👋🏼 Olá! Meu nome é Vitória</h1> 
           <p>
             Sou estudante de <strong className="font-extrabold font-sans">Desenvolvimento Full Stack</strong> com uma quedinha declarada pelo <strong className="font-extrabold font-sans">back-end</strong>.
-            {/* CORRIGIDO: font-sans em strong para garantir que seja sem serifa e extemamente bold */}
+            
           </p>
           <p className="md:text-lg">
             Amo criar soluções com código, misturando lógica, estrutura e um toque de criatividade.
           </p>
 
-          {/* Botão (Mantido) */}
+    
           <div className="pt-2 md:pt-4">
             <a href="#contact">
               <button 
@@ -63,7 +62,7 @@ export default function HomeComponent() {
           </div>
         </div>
 
-        {/* 3. Imagem (Mantido) */}
+     
         <div className="flex justify-center mb-4 md:mb-0">
           <Image
             src="/perfil.jpeg"
@@ -76,7 +75,7 @@ export default function HomeComponent() {
         </div>
       </div>
 
-      {/* Indicador de rolagem (Mantido) */}
+      
       <div className="mt-8 w-full flex justify-center items-center gap-1 text-muted-foreground animate-bounce">
         <Mouse size={20} />
         <p className="text-sm">Role para baixo!</p>

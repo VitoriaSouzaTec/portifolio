@@ -8,7 +8,6 @@ import { AnimatedLinearProgress } from '@/lib/AnimatedLinearProgress';
 
 export default function AccordionUsage() {
   
-  // ADICIONADO: Campo 'percentage' com valores variados
   const skillsData = [
     {
       title: "Frontend & UI/UX",
@@ -44,7 +43,7 @@ export default function AccordionUsage() {
 
   return (
     <>
-      {/* Título: Aplica font-sans */}
+      
       <h2 className='font-bold mt-15 text-3xl flex justify-center text-foreground font-sans' id='hardskills'>Habilidades</h2>
 
       <div className='mt-10 flex flex-col gap-4 justify-center items-center px-4'>
@@ -67,17 +66,17 @@ export default function AccordionUsage() {
               aria-controls={`${section.id}-content`} 
               id={section.id}
             >
-              {/* Título do Accordion: Aplica font-sans */}
+             
               <Typography 
                 component="span" 
                 sx={{ fontWeight: 'bold' }} 
-                className="font-sans" /* <-- FONT-SANS AQUI */
+                className="font-sans" 
               >
                 {section.title}
               </Typography>
             </AccordionSummary>
             
-            <AccordionDetails className="font-serif"> {/* <-- FONT-SERIF NO CONTAINER DE DETALHES */}
+            <AccordionDetails className="font-serif"> 
               {section.items.map((skill, index) => (
                 <AnimatedLinearProgress 
                   key={index}

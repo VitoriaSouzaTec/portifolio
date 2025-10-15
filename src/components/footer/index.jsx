@@ -2,30 +2,29 @@ import { Linkedin, Github, Instagram, Mail } from "lucide-react";
 
 export default function Footer() {
   
-  // Cor de fundo escura e neutra para o rodapé estilo Notion
+  
   const footerBgColor = 'bg-gray-900'; 
   const linkHoverColor = 'hover:text-gray-200';
 
   return (
     <footer className={`${footerBgColor} text-white py-12 px-6`}>
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-b border-gray-700 pb-8">
-        
-        {/* Coluna 1: Logo/Nome */}
+      
         <div className="text-center md:text-left">
           <h1 className="text-3xl font-bold">Vitória Souza</h1>
           <p className="text-base text-gray-400 mt-1">Desenvolvedora FullStack</p>
         </div>
 
-        {/* Coluna 2: Links de Navegação (Centralizado) */}
+        
         <nav className="flex justify-center md:justify-center gap-6 text-sm font-medium">
-          {/* Alinhando os links com as IDs do seu projeto */}
+          
           <a href="#about" className={`${linkHoverColor} transition-colors duration-200`}>Sobre</a>
           <a href="#hardskills" className={`${linkHoverColor} transition-colors duration-200`}>Habilidades</a>
           <a href="#projects" className={`${linkHoverColor} transition-colors duration-200`}>Projetos</a>
           <a href="#contact" className={`${linkHoverColor} transition-colors duration-200`}>Contato</a>
         </nav>
 
-        {/* Coluna 3: Redes Sociais (Alinhado à direita no desktop) */}
+      
         <div className="flex justify-center md:justify-end items-center space-x-6">
           <a href="https://github.com/VitoriaSouzaTec" target="_blank" rel="noopener noreferrer" className={`${linkHoverColor} transition-colors duration-200`}>
             <Github size={24} />
@@ -42,7 +41,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Copyright Limpo */}
+    
       <div className="text-center text-gray-400 text-sm pt-8">
         © 2025 Vitória Souza
       </div>
