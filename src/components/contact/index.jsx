@@ -13,13 +13,11 @@ export default function Contact() {
     >
       
    
-      <h2 className={`section__title text-3xl text-center font-bold mb-2 ${primaryTextColor} font-sans`}>
+      <h2 className={`section__title text-3xl text-center font-bold mb-10 ${primaryTextColor} font-sans`}>
         Contato
       </h2>
       
-      <span className="section_subtitle text-md text-center block mb-10 text-gray-700 font-serif">
-        Vamos construir algo incrível!
-      </span>
+     
 
      
       <div className="flex flex-col md:flex-row gap-12">

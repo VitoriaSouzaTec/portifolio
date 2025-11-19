@@ -7,7 +7,7 @@ export default function Footer() {
   const linkHoverColor = 'hover:text-gray-200';
 
   return (
-    <footer className={`${footerBgColor} text-white py-12 px-6`}>
+    <footer className={`${footerBgColor} text-white py-12 px-6 mt-8`}>
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-b border-gray-700 pb-8">
       
         <div className="text-center md:text-left">
