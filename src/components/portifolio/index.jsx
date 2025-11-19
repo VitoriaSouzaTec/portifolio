@@ -40,7 +40,7 @@ const projetos = [
   },
   {
     titulo: "Portifólio Giullia Influencer",
-    descricao: `Site pessoal com estética gamer, desenvolvido em React, criado para centralizar presença digital de uma influenciadora.
+    descricao: `Landing Page pessoal com estética gamer, desenvolvido em React, criado para centralizar presença digital de uma influenciadora.
     O projeto inclui links organizados para todas as redes, uma área de métricas de TikTok e Instagram consumidas via API, e um formulário de contato funcional.
     Além do visual moderno, o site reforça minha experiência com componentização, estados, integrações externas e criação de interfaces rápidas, responsivas e focadas em engajamento.`,
     imagem: "/portifolio-giullia.png",
@@ -48,7 +48,7 @@ const projetos = [
   },
   {
     titulo: "E-Commerce Avanti",
-    descricao: `Site e-commerce desenvolvido para a empresa Avanti, utilizando HTML, Tailwind CSS e JavaScript.
+    descricao: `Landing Page e-commerce desenvolvido para a empresa Avanti, utilizando HTML, Tailwind CSS e JavaScript.
     O projeto inclui um buscador funcional, exibindo resultados conforme o usuário digita, além de menu interativo, acordeons e componentes dinâmicos com Swiper.js.
     Focado apenas no front-end, o projeto reforça minha experiência em criar interfaces rápidas, responsivas e funcionais com código limpo e boas práticas.`,
     imagem: "/e-commerce-Avanti.png",
