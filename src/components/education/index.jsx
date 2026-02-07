@@ -7,54 +7,83 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 
 export default function AlternateReverseTimeline() {
-  
+
   const primaryTextColor = '#191919';
-  const neutralDotColor = '#EAEAEA'; 
+  const neutralDotColor = '#EAEAEA';
 
   return (
 
-    <div className="max-w-4xl mx-auto px-6 py-12 mt-20 bg-white shadow-lg rounded-xl border border-gray-200" id='education'>
-      
-      <div className="flex justify-center mb-10">
-        <span className={`text-4xl font-bold font-sans ${primaryTextColor}`}>Educação</span>
-      </div>
+    <div className="w-[90%] md:w-full max-w-6xl mx-auto px-6 py-12 mt-20 bg-white shadow-lg rounded-xl border border-gray-200" id='education'>
 
-      <div className="education information max-w-2xl mx-auto">
-        
-        <Timeline position="alternate-reverse">
-          {/* Item 1: ADS */}
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineDot sx={{ bgcolor: primaryTextColor }} />
-              <TimelineConnector sx={{ bgcolor: neutralDotColor }} />
-            </TimelineSeparator>
-            <TimelineContent
-              className={`text-foreground pb-8 pl-4 pr-4 font-serif`} 
-              sx={{ py: '12px', px: 2 }} 
-            >
-              {/* Título Educação*/}
-              <h3 className="text-lg font-bold font-sans">Análise e Desenvolvimento de Sistemas</h3>
-              <p className='text-sm text-gray-500'>Universidade Maurício de Nassau (Cursando)</p>
-            </TimelineContent>
-          </TimelineItem>
-      
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineDot sx={{ bgcolor: primaryTextColor }} />
-              <TimelineConnector sx={{ bgcolor: neutralDotColor }} />
-            </TimelineSeparator>
-            <TimelineContent
-              className={`text-foreground pb-8 pl-4 pr-4 font-serif`} /* <-- font-serif para a leitura */
-              sx={{ py: '12px', px: 2 }} 
-            >
-         
-              <h3 className="text-lg font-bold font-sans">Desenvolvimento Full-Stack</h3>
-              <p className='text-sm text-gray-500'>Digital College (Concluído)</p>
-            </TimelineContent>
-          </TimelineItem>
-          
-          
-        </Timeline>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+
+        {/* Coluna Educação */}
+        <div>
+          <div className="flex justify-center mb-8">
+            <span className={`text-3xl font-bold font-sans ${primaryTextColor}`}>Educação</span>
+          </div>
+          <div className="education information max-w-2xl mx-auto">
+            <Timeline position="alternate-reverse">
+              {/* Item 1: ADS */}
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot sx={{ bgcolor: primaryTextColor }} />
+                  <TimelineConnector sx={{ bgcolor: neutralDotColor }} />
+                </TimelineSeparator>
+                <TimelineContent
+                  className={`text-foreground pb-8 pl-4 pr-4 font-serif`}
+                  sx={{ py: '12px', px: 2 }}
+                >
+                  <h3 className="text-lg font-bold font-sans">Análise e Desenvolvimento de Sistemas</h3>
+                  <p className='text-sm text-gray-500'>Universidade Maurício de Nassau (Cursando)</p>
+                </TimelineContent>
+              </TimelineItem>
+
+              {/* Item 2: Full-Stack */}
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot sx={{ bgcolor: primaryTextColor }} />
+                  <TimelineConnector sx={{ bgcolor: neutralDotColor }} />
+                </TimelineSeparator>
+                <TimelineContent
+                  className={`text-foreground pb-8 pl-4 pr-4 font-serif`}
+                  sx={{ py: '12px', px: 2 }}
+                >
+                  <h3 className="text-lg font-bold font-sans">Desenvolvimento Full-Stack</h3>
+                  <p className='text-sm text-gray-500'>Digital College (Concluído)</p>
+                </TimelineContent>
+              </TimelineItem>
+            </Timeline>
+          </div>
+        </div>
+
+        {/* Coluna Carreira */}
+        <div>
+          <div className="flex justify-center mb-8">
+            <span className={`text-3xl font-bold font-sans ${primaryTextColor}`}>Carreira</span>
+          </div>
+          <div className="career information max-w-2xl mx-auto">
+            <Timeline position="alternate-reverse">
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot sx={{ bgcolor: primaryTextColor }} />
+                  <TimelineConnector sx={{ bgcolor: neutralDotColor }} />
+                </TimelineSeparator>
+                <TimelineContent
+                  className={`text-foreground pb-8 pl-4 pr-4 font-serif`}
+                  sx={{ py: '12px', px: 2 }}
+                >
+                  <h3 className="text-lg font-bold font-sans">Estágio em Front-end</h3>
+                  <p className='text-sm text-gray-500 mb-2'>Avanti Desenvolvimento de Sistemas LTDA (Atual)</p>
+                  <p className="text-sm/relaxed text-gray-600">
+                    Atuação no desenvolvimento e manutenção de interfaces utilizando VTEX, ReactJS, JavaScript e TypeScript, com foco em aplicações front-end modernas. Experiência no consumo e integração de APIs GraphQL, além de contato inicial com Node.js para compreensão do fluxo backend e integração com serviços.
+                  </p>
+                </TimelineContent>
+              </TimelineItem>
+            </Timeline>
+          </div>
+        </div>
+
       </div>
     </div>
   );

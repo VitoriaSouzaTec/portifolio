@@ -60,7 +60,15 @@ const projetos = [
 A aplicação usa useState e useEffect para controlar a busca, carregar os dados da API do GitHub e tratar possíveis erros. O visual traz um background colorido e um grid de pontos criado a partir de um array, mostrando o uso de mapeamento e lógica no React.`,
     imagem: "/buscador-de-perfil.png",
     link: "https://buscador-de-perfil.vercel.app/"
+  },
+  {
+    titulo: "Sistema de Barbearia",
+    descricao: `Aplicação SaaS de agendamento de barbearias, desenvolvida com Next.js, TypeScript, Tailwind CSS e shadcn/ui, focada em performance, experiência do usuário e automação inteligente.`,
+    imagem: "/old-court.png",
+    link: "https://barber-shop-one-alpha.vercel.app/"
   }
+
+
 
 ];
 
@@ -96,7 +104,7 @@ export default function CarouselProjetos() {
 
   return (
 
-    <div className="w-full max-w-6xl mx-auto mt-20 px-6 py-12 bg-white shadow-lg rounded-xl border border-gray-200" id="projects">
+    <div className="w-[90%] md:w-full max-w-6xl mx-auto mt-20 px-6 py-12 bg-white shadow-lg rounded-xl border border-gray-200" id="projects">
       {/* Título Principal: */}
       <h2 className="text-3xl font-bold text-center mb-10 text-foreground font-sans">Projetos</h2>
 

@@ -4,10 +4,10 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { ChevronDown } from 'lucide-react';
-import { AnimatedLinearProgress } from '@/lib/AnimatedLinearProgress'; 
+import { AnimatedLinearProgress } from '@/lib/AnimatedLinearProgress';
 
 export default function AccordionUsage() {
-  
+
   const skillsData = [
     {
       title: "Frontend & UI/UX",
@@ -38,57 +38,58 @@ export default function AccordionUsage() {
         { label: "Watchdog", iconUrl: null, iconAlt: "Watchdog", percentage: 70 },
       ],
     },
-    
+
   ];
 
   return (
     <>
-      
-      <h2 className='font-bold mt-15 text-3xl flex justify-center text-foreground font-sans' id='hardskills'>Habilidades</h2>
+      <div className="w-[90%] md:w-full max-w-6xl mx-auto mt-20 px-6 py-12 bg-white shadow-lg rounded-xl border border-gray-200" id='hardskills'>
+        <h2 className='font-bold text-3xl flex justify-center text-foreground font-sans'>Habilidades</h2>
 
-      <div className='mt-10 flex flex-col gap-4 justify-center items-center px-4'>
-        
-        {skillsData.map((section) => (
-          <Accordion 
-            key={section.id} 
-            sx={{ 
-              width: { xs: '100%', sm: '90%', md: '40%' }, 
-              maxWidth: '800px',
-              bgcolor: "#FFFFFF", 
-              color: "#191919", 
-              border: '1px solid #EAEAEA', 
-              boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)', 
-              borderRadius: '8px'
-            }}
-          >
-            <AccordionSummary 
-              expandIcon={<ChevronDown className="text-foreground" />} 
-              aria-controls={`${section.id}-content`} 
-              id={section.id}
+        <div className='mt-10 flex flex-col gap-4 justify-center items-center px-4'>
+
+          {skillsData.map((section) => (
+            <Accordion
+              key={section.id}
+              sx={{
+                width: { xs: '100%', sm: '90%', md: '80%' },
+                maxWidth: '800px',
+                bgcolor: "#FFFFFF",
+                color: "#191919",
+                border: '1px solid #EAEAEA',
+                boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)',
+                borderRadius: '8px'
+              }}
             >
-             
-              <Typography 
-                component="span" 
-                sx={{ fontWeight: 'bold' }} 
-                className="font-sans" 
+              <AccordionSummary
+                expandIcon={<ChevronDown className="text-foreground" />}
+                aria-controls={`${section.id}-content`}
+                id={section.id}
               >
-                {section.title}
-              </Typography>
-            </AccordionSummary>
-            
-            <AccordionDetails className="font-serif"> 
-              {section.items.map((skill, index) => (
-                <AnimatedLinearProgress 
-                  key={index}
-                  label={skill.label}
-                  iconUrl={skill.iconUrl}
-                  iconAlt={skill.iconAlt}
-                  percentage={skill.percentage} 
-                />
-              ))}
-            </AccordionDetails>
-          </Accordion>
-        ))}
+
+                <Typography
+                  component="span"
+                  sx={{ fontWeight: 'bold' }}
+                  className="font-sans"
+                >
+                  {section.title}
+                </Typography>
+              </AccordionSummary>
+
+              <AccordionDetails className="font-serif">
+                {section.items.map((skill, index) => (
+                  <AnimatedLinearProgress
+                    key={index}
+                    label={skill.label}
+                    iconUrl={skill.iconUrl}
+                    iconAlt={skill.iconAlt}
+                    percentage={skill.percentage}
+                  />
+                ))}
+              </AccordionDetails>
+            </Accordion>
+          ))}
+        </div>
       </div>
     </>
   );
