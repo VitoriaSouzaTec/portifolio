@@ -6,10 +6,13 @@ import AlternateReverseTimeline from "@/components/education";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import CarouselProjetos from "@/components/portifolio";
+import ThreeBackground from "@/components/ThreeBackground";
+import ServicosSection from "@/components/servicos";
 
 export default function Home() {
   return (
     <>
+      <ThreeBackground />
 
       <Nav />
 
@@ -20,6 +23,7 @@ export default function Home() {
         <AlternateReverseTimeline />
         <CarouselProjetos />
         <Contact />
+        <ServicosSection />
       </div>
 
       <Footer />

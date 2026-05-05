@@ -1,155 +1,219 @@
 "use client";
 
-import React from "react";
-import dynamic from "next/dynamic";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-const Slider = dynamic(() => import("react-slick"), { ssr: false });
+import React, { useState, useEffect } from "react";
 
 const projetos = [
   {
-    titulo: "E-Comerce",
-    descricao: "Uma aplicação Full Stack de e-commerce de roupas, desenvolvida com Next.js, que oferece uma experiência de compra moderna e intuitiva. O sistema de pagamentos utiliza o Stripe para transações seguras, e o login é fácil com Google Auth. A arquitetura do banco de dados usa Neon e a ORM Drizzle.",
+    titulo: "E-Commerce Beware",
+    descricao: "Aplicação Full Stack de e-commerce de roupas com Next.js, Stripe para pagamentos, Google Auth, banco de dados Neon e ORM Drizzle.",
     imagem: "/tela-beware.png",
-    link: "https://bewearshop.vercel.app/"
+    link: "https://bewearshop.vercel.app/",
+    tags: ["Next.js", "TypeScript","Stripe", "Google Auth", "Drizzle", "Neon"],
+    category: "web"
   },
   {
-    titulo: "Catálogo Digital de Concessionária (Loja de Carros)",
-    descricao: "Projeto Front-End completo desenvolvido em React e TypeScript, focado em simular um catálogo de veículos (carros e motos) e a jornada de compra de uma concessionária. A principal feature é a conversão direta, onde o usuário finaliza o interesse de compra (Financiamento, À Vista ou Consórcio) e é direcionado para o WhatsApp do vendedor com dados e interesse pré-preenchidos. O projeto também inclui a UI de um Painel Administrativo. **Tecnologias-chave:** React, TypeScript, Lucide Icons, Integração com WhatsApp.",
+    titulo: "Catálogo Digital de Concessionária",
+    descricao: "Catálogo de veículos com jornada de compra completa, integração com WhatsApp e painel administrativo. Conversão direta com dados pré-preenchidos.",
     imagem: "/carros.png",
-    link: "https://loja-de-carros-one.vercel.app/"
+    link: "https://loja-de-carros-one.vercel.app/",
+    tags: ["React", "TypeScript", "WhatsApp"],
+    category: "web"
   },
   {
-    titulo: "Classificador De Filmes",
-    descricao: "Construída com Next.js no front-end e Express + Sequelize no back-end, usando PostgreSQL. O sistema conta com autenticação via JWT, painel de admin com CRUD completo e comunicação em tempo real com Socket.IO.",
+    titulo: "Classificador de Filmes",
+    descricao: "Plataforma com autenticação JWT, painel admin com CRUD completo e comunicação em tempo real via Socket.IO.",
     imagem: "/projeto-classificador-filmes.png",
-    link: "https://projeto-anime-rust.vercel.app/"
+    link: "https://projeto-anime-rust.vercel.app/",
+    tags: ["Next.js", "Express", "Socket.IO", "PostgreSQL"],
+    category: "saas"
   },
   {
     titulo: "Plataforma de Cursos",
-    descricao: "Projeto Full-Stack com foco no desenvolvimento do backend em Node.js/Express e Prisma, com sistema de autenticação seguro por JWT e Bcrypt. O trabalho incluiu a criação da API e a integração com o front-end.",
+    descricao: "Full-Stack com Node.js/Express e Prisma, autenticação segura por JWT e Bcrypt, API integrada ao front-end.",
     imagem: "/digital-cursos.png",
-    link: "https://github.com/VitoriaSouzaTec/Digital-Cursos-API"
+    link: "https://github.com/VitoriaSouzaTec/Digital-Cursos-API",
+    tags: ["Node.js", "Prisma", "JWT"],
+    category: "saas"
   },
   {
-    titulo: "Chronos Pomodoro - Timer de Produtividade",
-    descricao: "Um timer Pomodoro minimalista e funcional, inteiramente construído com **React** para otimizar o foco e a produtividade. Este projeto foi um marco no meu aprendizado, permitindo-me aprofundar e consolidar conhecimentos essenciais no ecossistema React, especialmente no gerenciamento de estado e ciclo de vida de componentes. Embora visualmente simples, o projeto é uma prova prática da minha capacidade de transformar uma ideia simples em uma ferramenta útil e funcional.",
+    titulo: "Chronos Pomodoro",
+    descricao: "Timer Pomodoro minimalista e funcional em React, com foco em gerenciamento de estado e ciclo de vida de componentes.",
     imagem: "/chronos-pomodoro.png",
-    link: "https://chronos-pomodoro-cyan-five.vercel.app/"
+    link: "https://chronos-pomodoro-cyan-five.vercel.app/",
+    tags: ["React", "TypeScript"],
+    category: "web"
   },
   {
-    titulo: "Portifólio Giullia Influencer",
-    descricao: `Site pessoal com estética gamer, desenvolvido em React, criado para centralizar presença digital de uma influenciadora.
-    O projeto inclui links organizados para todas as redes, uma área de métricas de TikTok e Instagram consumidas via API, e um formulário de contato funcional.
-    Além do visual moderno, o site reforça minha experiência com componentização, estados, integrações externas e criação de interfaces rápidas, responsivas e focadas em engajamento.`,
+    titulo: "Portfólio Giullia Influencer",
+    descricao: "Site pessoal com estética gamer em React, métricas de TikTok e Instagram via API, links organizados e formulário de contato.",
     imagem: "/portifolio-giullia.png",
-    link: "https://giullia-portifolio.vercel.app/"
+    link: "https://giullia-portifolio.vercel.app/",
+    tags: ["React", "API", "TypeScript"],
+    category: "web"
   },
   {
     titulo: "E-Commerce Avanti",
-    descricao: `Site e-commerce desenvolvido para a empresa Avanti, utilizando HTML, Tailwind CSS e JavaScript.
-    O projeto inclui um buscador funcional, exibindo resultados conforme o usuário digita, além de menu interativo, acordeons e componentes dinâmicos com Swiper.js.
-    Focado apenas no front-end, o projeto reforça minha experiência em criar interfaces rápidas, responsivas e funcionais com código limpo e boas práticas.`,
+    descricao: "Site e-commerce com buscador funcional, menu interativo, acordeons e componentes dinâmicos com Swiper.js.",
     imagem: "/e-commerce-Avanti.png",
-    link: "https://e-commerce-avanti.vercel.app/"
+    link: "https://e-commerce-avanti.vercel.app/",
+    tags: ["HTML5", "Tailwind", "JavaScript"],
+    category: "web"
   },
   {
-    titulo: "Buscador de perfil GitHub",
-    descricao: `Buscador de perfis do GitHub feito com React e Tailwind CSS.
-A aplicação usa useState e useEffect para controlar a busca, carregar os dados da API do GitHub e tratar possíveis erros. O visual traz um background colorido e um grid de pontos criado a partir de um array, mostrando o uso de mapeamento e lógica no React.`,
+    titulo: "Buscador de Perfil GitHub",
+    descricao: "Buscador de perfis do GitHub com React e Tailwind, usando useState e useEffect para controlar busca e tratar erros.",
     imagem: "/buscador-de-perfil.png",
-    link: "https://buscador-de-perfil.vercel.app/"
+    link: "https://buscador-de-perfil.vercel.app/",
+    tags: ["React", "Tailwind", "API"],
+    category: "web"
   },
   {
     titulo: "Sistema de Barbearia",
-    descricao: `Aplicação SaaS de agendamento de barbearias, desenvolvida com Next.js, TypeScript, Tailwind CSS e shadcn/ui, focada em performance, experiência do usuário e automação inteligente.`,
+    descricao: "SaaS de agendamento com Next.js, TypeScript, Tailwind CSS e shadcn/ui, focado em performance e automação inteligente.",
     imagem: "/old-court.png",
-    link: "https://barber-shop-one-alpha.vercel.app/"
-  }
+    link: "https://barber-shop-one-alpha.vercel.app/",
+    tags: ["Next.js", "shadcn/ui", "TypeScript", "GoogleAuth", "Prisma"],
+    category: "saas"
+  },
+  {
+    titulo: "Sistema de Treinos",
+    descricao: "SaaS de treino com Next.js, TypeScript, Tailwind CSS e shadcn/ui, focado em performance e automação inteligente. backend construido em fastify e prisma.",
+    imagem: "/treinos-api.png",
+    link: "https://front-treinos.vercel.app/",
+    tags: ["Next.js", "shadcn/ui", "TypeScript", "Fastify", "Prisma"],
+    category: "saas"
+  },
+];
 
-
-
+const filters = [
+  { label: "Todos", value: "all" },
+  { label: "SaaS", value: "saas" },
+  { label: "Web", value: "web" },
 ];
 
 export default function CarouselProjetos() {
+  const [activeFilter, setActiveFilter] = useState("all");
 
-  // Configurações do Slider: Responsivo
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    responsive: [
-      {
-        // Telas grandes (desktop)
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+          }
+        });
       },
-      {
-        // Telas pequenas (mobile/tablet)
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      }
-    ]
-  };
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll("#projects .reveal, #projects .reveal-scale").forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [activeFilter]);
+
+  const filtered = activeFilter === "all"
+    ? projetos
+    : projetos.filter((p) => p.category === activeFilter);
 
   return (
+    <section
+      className="relative py-20 sm:py-28"
+      id="projects"
+      style={{ background: "linear-gradient(180deg, #050505 0%, #08080a 50%, #050505 100%)" }}
+    >
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
 
-    <div className="w-[90%] md:w-full max-w-6xl mx-auto mt-20 px-6 py-12 bg-white shadow-lg rounded-xl border border-gray-200" id="projects">
-      {/* Título Principal: */}
-      <h2 className="text-3xl font-bold text-center mb-10 text-foreground font-sans">Projetos</h2>
+        {/* Header */}
+        <div className="text-center mb-6 reveal">
 
-      {/* Container do Slider */}
-      <div className="mx-auto max-w-5xl">
-        <Slider {...settings}>
-          {projetos.map((proj, index) => (
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-2 text-white">
+            Projetos
+          </h2>
 
-            <div key={index} className="px-4 pb-8">
-              <div className="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-md h-full flex flex-col transition-all duration-300 hover:shadow-xl">
+          <div className="section-divider mx-auto mt-4" />
+        </div>
 
-
-                <div className="relative h-48 w-full overflow-hidden">
-                  <img
-                    src={proj.imagem}
-                    alt={proj.titulo}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* Bloco de Conteúdo */}
-                <div className="p-6 flex flex-col justify-between flex-grow">
-                  <div>
-                    {/* Título do Projeto*/}
-                    <h3 className="text-xl font-bold mb-2 text-foreground font-sans">{proj.titulo}</h3>
-                    {/* Descrição */}
-                    <p className="text-base text-gray-600 leading-relaxed mb-4 font-serif">{proj.descricao}</p>
-                  </div>
-
-                  {/* Botão de Ação*/}
-                  <a
-                    href={proj.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block w-full text-center bg-gray-800 text-white font-medium px-4 py-2 rounded-md hover:bg-gray-700 transition-colors duration-200 font-sans"
-                  >
-                    Ver Projeto
-                  </a>
-                </div>
-
+        {/* Counters */}
+        <div className="flex items-center justify-center gap-6 mb-10 reveal delay-100">
+          {[
+            { value: projetos.length.toString(), label: "Projetos" },
+            { value: "3", label: "Categorias" },
+            { value: "15+", label: "Tecnologias" },
+          ].map((item, i) => (
+            <React.Fragment key={item.label}>
+              {i > 0 && <div className="w-px h-8" style={{ background: "rgba(255,255,255,0.1)" }} />}
+              <div className="text-center">
+                <span className="text-2xl font-extrabold text-gold-gradient">{item.value}</span>
+                <span
+                  className="block text-[0.6rem] uppercase tracking-widest mt-0.5"
+                  style={{ color: "var(--text-tertiary)" }}
+                >
+                  {item.label}
+                </span>
               </div>
-            </div>
+            </React.Fragment>
           ))}
-        </Slider>
+        </div>
+
+        {/* Filter Pills */}
+        <div className="flex items-center justify-center gap-2 flex-wrap mb-10 reveal delay-200">
+          {filters.map((f) => (
+            <button
+              key={f.value}
+              className={`filter-pill ${activeFilter === f.value ? "active" : ""}`}
+              onClick={() => setActiveFilter(f.value)}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Project Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {filtered.map((proj, index) => (
+            <a
+              key={proj.titulo}
+              href={proj.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-card reveal-scale"
+              style={{ height: "320px", textDecoration: "none" }}
+            >
+              {/* Image */}
+              <img
+                src={proj.imagem}
+                alt={proj.titulo}
+                className="project-img"
+              />
+
+              {/* Info overlay */}
+              <div className="project-info">
+                <h3 className="text-sm font-bold text-white">{proj.titulo}</h3>
+
+                <div className="project-tags">
+                  {proj.tags.map((tag) => (
+                    <span key={tag} className="proj-tag">{tag}</span>
+                  ))}
+                </div>
+
+                <p className="project-desc">{proj.descricao}</p>
+              </div>
+
+              {/* Top overlay: link button */}
+              <div className="proj-overlay-top">
+                <div className="proj-tags" />
+                <span className="proj-link-btn">
+                  <iconify-icon icon="mdi:open-in-new" width="12" />
+                  Ver projeto
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+
       </div>
-    </div>
+    </section>
   );
 }

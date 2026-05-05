@@ -3,12 +3,12 @@ import { Linkedin, Github, Instagram, Mail } from "lucide-react";
 export default function Footer() {
   
   
-  const footerBgColor = 'bg-gray-900'; 
-  const linkHoverColor = 'hover:text-gray-200';
+  const footerBgColor = 'bg-black'; 
+  const linkHoverColor = 'hover:text-gold';
 
   return (
     <footer className={`${footerBgColor} text-white py-12 px-6 mt-8`}>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-b border-gray-700 pb-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-b border-primary pb-8">
       
         <div className="text-center md:text-left">
           <h1 className="text-3xl font-bold">Vitória Souza</h1>

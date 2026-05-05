@@ -3,12 +3,11 @@ import React from 'react';
 
 export default function Contact() {
 
-  const primaryTextColor = 'text-foreground'; // Cor de texto principal)
+  const primaryTextColor = 'text-foreground';
 
   return (
-    // Card Principal: Bloco limpo do Notion (max-w para leitura fácil, sombra e borda)
     <section
-      className="w-[90%] md:w-full max-w-6xl mx-auto px-6 py-12 mt-20 bg-white shadow-lg rounded-xl border border-gray-200"
+      className="w-[90%] md:w-full max-w-6xl mx-auto px-6 py-12 mt-20  shadow-lg rounded-xl border border-primary/40 bg-background/50 backdrop-blur-sm"
       id="contact"
     >
 
@@ -16,9 +15,6 @@ export default function Contact() {
       <h2 className={`section__title text-3xl text-center font-bold mb-10 ${primaryTextColor} font-sans`}>
         Contato
       </h2>
-
-
-
 
       <div className="flex flex-col md:flex-row gap-12">
 
@@ -60,14 +56,14 @@ export default function Contact() {
               name="name"
               placeholder="Seu Nome"
               required
-              className="w-full h-12 px-4 rounded-md border border-gray-300 focus:border-gray-500 focus:ring-0 placeholder-gray-500 text-foreground transition-shadow duration-200 shadow-sm"
+              className="w-full h-12 px-4 rounded-md border border-primary/30 focus:border-primary focus:ring-1 focus:ring-primary/20 placeholder-gray-500 text-foreground transition-shadow duration-200 shadow-sm"
             />
             <input
               type="email"
               name="email"
               placeholder="Seu Email"
               required
-              className="w-full h-12 px-4 rounded-md border border-gray-300 focus:border-gray-500 focus:ring-0 placeholder-gray-500 text-foreground transition-shadow duration-200 shadow-sm"
+              className="w-full h-12 px-4 rounded-md border border-primary/30 focus:border-primary focus:ring-1 focus:ring-primary/20 placeholder-gray-500 text-foreground transition-shadow duration-200 shadow-sm"
             />
           </div>
 
@@ -77,7 +73,7 @@ export default function Contact() {
             name="subject"
             placeholder="Assunto"
             required
-            className="w-full h-12 px-4 rounded-md border border-gray-300 focus:border-gray-500 focus:ring-0 placeholder-gray-500 text-foreground transition-shadow duration-200 shadow-sm"
+            className="w-full h-12 px-4 rounded-md border border-primary/30 focus:border-primary focus:ring-1 focus:ring-primary/20 placeholder-gray-500 text-foreground transition-shadow duration-200 shadow-sm"
           />
 
 
@@ -86,13 +82,13 @@ export default function Contact() {
             placeholder="Sua Mensagem..."
             rows="6"
             required
-            className="w-full p-4 rounded-md border border-gray-300 focus:border-gray-500 focus:ring-0 placeholder-gray-500 text-foreground transition-shadow duration-200 shadow-sm resize-none"
+            className="w-full p-4 rounded-md border border-primary/30 focus:border-primary focus:ring-1 focus:ring-primary/20 placeholder-gray-500 text-foreground transition-shadow duration-200 shadow-sm resize-none"
           ></textarea>
 
 
           <button
             type="submit"
-            className="inline-flex items-center gap-2 bg-gray-800 text-white font-medium px-6 py-3 rounded-md shadow-md hover:bg-gray-700 transition-colors duration-200 font-sans"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-medium px-6 py-3 rounded-md shadow-md hover:bg-gold-light transition-colors duration-200 font-sans"
           >
             Enviar Mensagem
             <Send size={18} />

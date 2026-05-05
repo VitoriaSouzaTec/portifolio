@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function HomeComponent() {
 
   const primaryNotionColor = 'text-foreground';
-  const buttonHoverColor = 'hover:bg-gray-100';
+  const buttonHoverColor = 'hover:bg-gold-dim hover:text-gold';
 
   return (
     <>
@@ -14,9 +14,9 @@ export default function HomeComponent() {
         flex flex-col-reverse md:flex-row justify-center items-center 
         mt-20 space-y-8 md:space-y-0 md:space-x-12 
         
-        /* Estilo Notion: Fundo Branco Sólido, Sombra e Borda Limpa */
-        bg-white shadow-lg rounded-xl p-6 md:p-10 lg:p-12 
-        text-foreground border border-gray-200 w-[90%] md:w-full mx-auto max-w-6xl
+
+        shadow-lg rounded-xl p-6 md:p-10 lg:p-12 
+        text-foreground border border-primary w-[90%] md:w-full mx-auto max-w-6xl
         min-h-[550px]
       " id='home'>
 
@@ -39,43 +39,23 @@ export default function HomeComponent() {
 
         <div className="flex flex-col space-y-4 text-center md:text-left text-foreground 
                          text-lg md:text-xl max-w-md md:max-w-xl font-serif">
-          <h1 className="text-3xl md:text-5xl font-bold font-sans">👋🏼 Olá! Meu nome é Vitória</h1>
+          <h1 className="text-3xl md:text-5xl font-bold font-sans">👋🏼 Oi! Meu nome é Vitória</h1>
           <p>
-            Sou estudante de <strong className="font-extrabold font-sans">Desenvolvimento Full Stack</strong> com uma quedinha declarada pelo <strong className="font-extrabold font-sans">back-end</strong>.
-
+            Desenvolvedora de Software Júnior, especializada em <strong className="font-extrabold font-sans">desenvolvimento Full Stack</strong>
           </p>
-          <p className="md:text-lg">
-            Amo criar soluções com código, misturando lógica, estrutura e um toque de criatividade.
-          </p>
-
-
-          <div className="pt-2 md:pt-4">
-            <a href="#contact">
-              <button
-                className="w-[180px] h-[50px] bg-primary text-primary-foreground 
-                           rounded-md font-semibold text-lg transition-colors duration-200 
-                           shadow-md hover:bg-primary/90"
-              >
-                Fale comigo!
-              </button>
-            </a>
-          </div>
         </div>
-
-
         <div className="flex justify-center mb-4 md:mb-0">
           <Image
             src="/perfil.jpeg"
             alt="Foto de perfil de Vitória Souza"
             width={280}
             height={280}
-            className="rounded-xl object-cover border-4 border-gray-100 shadow-lg"
+            className="rounded-xl object-cover border-4 border-primary shadow-lg"
             priority
           />
         </div>
       </div>
-
-
+      
       <div className="mt-8 w-full flex justify-center items-center gap-1 text-muted-foreground animate-bounce">
         <Mouse size={20} />
         <p className="text-sm">Role para baixo!</p>

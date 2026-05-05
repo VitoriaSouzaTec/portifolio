@@ -8,27 +8,27 @@ import TimelineDot from '@mui/lab/TimelineDot';
 
 export default function AlternateReverseTimeline() {
 
-  const primaryTextColor = '#191919';
-  const neutralDotColor = '#EAEAEA';
+  const primaryTextColor = 'var(--gold)';
+  const neutralDotColor = 'var(--gold-dim)';
 
   return (
 
-    <div className="w-[90%] md:w-full max-w-6xl mx-auto px-6 py-12 mt-20 bg-white shadow-lg rounded-xl border border-gray-200" id='education'>
+    <div className="w-[90%] md:w-full max-w-6xl mx-auto px-6 py-12 mt-20  shadow-lg rounded-xl border border-primary/40 bg-background/50 backdrop-blur-sm" id='education'>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
 
         {/* Coluna Educação */}
         <div>
           <div className="flex justify-center mb-8">
-            <span className={`text-3xl font-bold font-sans ${primaryTextColor}`}>Educação</span>
+            <span className={`text-3xl font-bold font-sans text-foreground`}>Educação</span>
           </div>
           <div className="education information max-w-2xl mx-auto">
             <Timeline position="alternate-reverse">
               {/* Item 1: ADS */}
               <TimelineItem>
                 <TimelineSeparator>
-                  <TimelineDot sx={{ bgcolor: primaryTextColor }} />
-                  <TimelineConnector sx={{ bgcolor: neutralDotColor }} />
+                  <TimelineDot sx={{ bgcolor: 'var(--gold)' }} />
+                  <TimelineConnector sx={{ bgcolor: 'var(--gold-dim)' }} />
                 </TimelineSeparator>
                 <TimelineContent
                   className={`text-foreground pb-8 pl-4 pr-4 font-serif`}
@@ -42,8 +42,8 @@ export default function AlternateReverseTimeline() {
               {/* Item 2: Full-Stack */}
               <TimelineItem>
                 <TimelineSeparator>
-                  <TimelineDot sx={{ bgcolor: primaryTextColor }} />
-                  <TimelineConnector sx={{ bgcolor: neutralDotColor }} />
+                  <TimelineDot sx={{ bgcolor: 'var(--gold)' }} />
+                  <TimelineConnector sx={{ bgcolor: 'var(--gold-dim)' }} />
                 </TimelineSeparator>
                 <TimelineContent
                   className={`text-foreground pb-8 pl-4 pr-4 font-serif`}
@@ -60,14 +60,14 @@ export default function AlternateReverseTimeline() {
         {/* Coluna Carreira */}
         <div>
           <div className="flex justify-center mb-8">
-            <span className={`text-3xl font-bold font-sans ${primaryTextColor}`}>Carreira</span>
+            <span className={`text-3xl font-bold font-sans text-foreground`}>Carreira</span>
           </div>
           <div className="career information max-w-2xl mx-auto">
             <Timeline position="alternate-reverse">
               <TimelineItem>
                 <TimelineSeparator>
-                  <TimelineDot sx={{ bgcolor: primaryTextColor }} />
-                  <TimelineConnector sx={{ bgcolor: neutralDotColor }} />
+                  <TimelineDot sx={{ bgcolor: 'var(--gold)' }} />
+                  <TimelineConnector sx={{ bgcolor: 'var(--gold-dim)' }} />
                 </TimelineSeparator>
                 <TimelineContent
                   className={`text-foreground pb-8 pl-4 pr-4 font-serif`}

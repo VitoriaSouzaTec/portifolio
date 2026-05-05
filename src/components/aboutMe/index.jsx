@@ -3,12 +3,12 @@ import { Download } from 'lucide-react';
 export default function AboutSection() {
 
   const primaryTextColor = 'text-foreground';
-  const buttonBgColor = 'bg-gray-800';
-  const buttonHover = 'hover:bg-gray-700';
+  const buttonBgColor = 'bg-primary';
+  const buttonHover = 'hover:bg-gold-light';
 
   return (
 
-    <div className="w-[90%] md:w-full max-w-6xl mx-auto mt-20 px-6 py-12 bg-white shadow-lg rounded-xl border border-gray-200" id='about'>
+    <div className="w-[90%] md:w-full max-w-6xl mx-auto mt-20 px-6 py-12  shadow-lg rounded-xl border border-primary/40 bg-background/50 backdrop-blur-sm" id='about'>
 
       {/* 1. Título  */}
       <div className="mb-8">
@@ -29,7 +29,7 @@ export default function AboutSection() {
       </div>
 
       {/* Divisor */}
-      <hr className="my-10 border-gray-300" />
+      <hr className="my-10 border-primary/20" />
 
 
 
@@ -39,7 +39,7 @@ export default function AboutSection() {
           href="/curriculo.pdf"
           download
 
-          className={`w-[200px] flex items-center justify-center gap-2 px-6 py-3 ${buttonBgColor} text-white rounded-lg font-medium transition-colors duration-200 shadow-md ${buttonHover} font-sans`}
+          className={`w-[200px] flex items-center justify-center gap-2 px-6 py-3 ${buttonBgColor} text-primary-foreground rounded-lg font-medium transition-colors duration-200 shadow-md ${buttonHover} font-sans`}
         >
           <Download size={20} />
           Download CV
