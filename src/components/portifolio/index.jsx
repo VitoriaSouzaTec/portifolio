@@ -71,7 +71,7 @@ const projetos = [
     titulo: "Sistema de Barbearia",
     descricao: "SaaS de agendamento com Next.js, TypeScript, Tailwind CSS e shadcn/ui, focado em performance e automação inteligente.",
     imagem: "/old-court.png",
-    link: "https://barber-shop-one-alpha.vercel.app/",
+    link: "https://barbearia-neww.vercel.app/",
     tags: ["Next.js", "shadcn/ui", "TypeScript", "GoogleAuth", "Prisma"],
     category: "saas"
   },
