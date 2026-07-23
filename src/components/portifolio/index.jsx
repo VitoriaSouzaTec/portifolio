@@ -36,13 +36,14 @@ const projetos = [
     category: "saas"
   },
   {
-    titulo: "Chronos Pomodoro",
-    descricao: "Timer Pomodoro minimalista e funcional em React, com foco em gerenciamento de estado e ciclo de vida de componentes.",
-    imagem: "/chronos-pomodoro.png",
-    link: "https://chronos-pomodoro-cyan-five.vercel.app/",
-    tags: ["React", "TypeScript"],
-    category: "web"
-  },
+  titulo: "Landing Page Psicóloga",
+  descricao:
+    "Landing page moderna para psicóloga, desenvolvida com HTML, CSS e JavaScript. Conta com design responsivo, agendamento de consultas, integração com WhatsApp e foco na conversão de clientes.",
+  imagem: "/landig-psicologa.png",
+  link: "https://lp-psicologa-cyan.vercel.app/",
+  tags: ["HTML", "CSS", "JavaScript"],
+  category: "web"
+},
   {
     titulo: "Portfólio Giullia Influencer",
     descricao: "Site pessoal com estética gamer em React, métricas de TikTok e Instagram via API, links organizados e formulário de contato.",
@@ -68,7 +69,7 @@ const projetos = [
     category: "web"
   },
   {
-    titulo: "Sistema de Barbearia",
+    titulo: "Sistema de Barbearia Mobile",
     descricao: "SaaS de agendamento com Next.js, TypeScript, Tailwind CSS e shadcn/ui, focado em performance e automação inteligente.",
     imagem: "/old-court.png",
     link: "https://barbearia-neww.vercel.app/",

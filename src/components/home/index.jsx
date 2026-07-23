@@ -13,10 +13,8 @@ export default function HomeComponent() {
       <div className="
         flex flex-col-reverse md:flex-row justify-center items-center 
         mt-20 space-y-8 md:space-y-0 md:space-x-12 
-        
-
         shadow-lg rounded-xl p-6 md:p-10 lg:p-12 
-        text-foreground border border-primary w-[90%] md:w-full mx-auto max-w-6xl
+        text-foreground w-[90%] md:w-full mx-auto max-w-6xl
         min-h-[550px]
       " id='home'>
 
@@ -46,10 +44,10 @@ export default function HomeComponent() {
         </div>
         <div className="flex justify-center mb-4 md:mb-0">
           <Image
-            src="/perfil.jpeg"
+            src="/perfil.png"
             alt="Foto de perfil de Vitória Souza"
-            width={280}
-            height={280}
+            width={380}
+            height={380}
             className="rounded-xl object-cover border-4 border-primary shadow-lg"
             priority
           />
