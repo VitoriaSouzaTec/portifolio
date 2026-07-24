@@ -14,7 +14,7 @@ export default function HomeComponent() {
         flex flex-col-reverse md:flex-row justify-center items-center 
         mt-20 space-y-8 md:space-y-0 md:space-x-12 
         shadow-lg rounded-xl p-6 md:p-10 lg:p-12 
-        text-foreground w-[90%] md:w-full mx-auto max-w-6xl
+        text-foreground w-[90%] md:w-full mx-auto max-w-6xldr
         min-h-[550px]
       " id='home'>
 
