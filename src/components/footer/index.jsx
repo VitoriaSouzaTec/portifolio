@@ -27,17 +27,15 @@ export default function Footer() {
       
         <div className="flex justify-center md:justify-end items-center space-x-6">
           <a href="https://github.com/VitoriaSouzaTec" target="_blank" rel="noopener noreferrer" className={`${linkHoverColor} transition-colors duration-200`}>
-            <Github size={24} />
+            <Github size={19} />
           </a>
           <a href="https://www.linkedin.com/in/vitoria-souza-3a50521b7/" target="_blank" rel="noopener noreferrer" className={`${linkHoverColor} transition-colors duration-200`}>
-            <Linkedin size={24} />
+            <Linkedin size={19} />
           </a>
           <a href="mailto:vitoriasouzatec@gmail.com" className={`${linkHoverColor} transition-colors duration-200`} target="_blank" rel="noopener noreferrer">
-            <Mail size={24} />
+            <Mail size={19} />
           </a>
-          <a href="https://www.instagram.com/vitoria__souzasz" target="_blank" rel="noopener noreferrer" className={`${linkHoverColor} transition-colors duration-200`}>
-            <Instagram size={24} />
-          </a>
+          
         </div>
       </div>
 

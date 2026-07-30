@@ -22,16 +22,13 @@ export default function HomeComponent() {
         <div className="flex md:flex-col gap-6 justify-center md:pt-2">
 
           <a href="https://www.linkedin.com/in/vitoria-souza-3a50521b7/" target="_blank" rel="noreferrer" className={`${buttonHoverColor} p-2 rounded-md transition-colors duration-200`}>
-            <Linkedin className={`${primaryNotionColor} w-6 h-6 md:w-7 md:h-7`} />
+            <Linkedin className={`${primaryNotionColor} w-4 h-4 md:w-7 md:h-7`} />
           </a>
           <a href="https://github.com/VitoriaSouzaTec" target="_blank" rel="noreferrer" className={`${buttonHoverColor} p-2 rounded-md transition-colors duration-200`}>
-            <Github className={`${primaryNotionColor} w-6 h-6 md:w-7 md:h-7`} />
+            <Github className={`${primaryNotionColor} w-4 h-4 md:w-7 md:h-7`} />
           </a>
           <a href="mailto:vitoriasouzatec@gmail.com" target="_blank" rel="noreferrer" className={`${buttonHoverColor} p-2 rounded-md transition-colors duration-200`}>
-            <Mail className={`${primaryNotionColor} w-6 h-6 md:w-7 md:h-7`} />
-          </a>
-          <a href="https://www.instagram.com/vitoria__souzasz" target="_blank" rel="noreferrer" className={`${buttonHoverColor} p-2 rounded-md transition-colors duration-200`}>
-            <Instagram className={`${primaryNotionColor} w-6 h-6 md:w-7 md:h-7`} />
+            <Mail className={`${primaryNotionColor} w-4 h-4 md:w-7 md:h-7`} />
           </a>
         </div>
 
@@ -48,7 +45,7 @@ export default function HomeComponent() {
             alt="Foto de perfil de Vitória Souza"
             width={380}
             height={380}
-            className="rounded-xl object-cover border-4 border-primary shadow-lg"
+            className="rounded-xl object-cover   shadow-lg"
             priority
           />
         </div>
